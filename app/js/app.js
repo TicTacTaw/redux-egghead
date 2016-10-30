@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { combineReducers, createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -255,21 +256,6 @@ const TodoApp = () => (
     <Footer />
   </div>
 );
-
-class Provider extends React.Component {
-  getChildContext() {
-      return {
-        store: this.props.store
-      }
-  }
-
-  render() {
-    return this.props.children;
-  }
-}
-Provider.childContextTypes = {
-  store: React.PropTypes.object
-};
 
 ReactDOM.render(
   <Provider store={createStore(todoApp)}>
