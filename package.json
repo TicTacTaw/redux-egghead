@@ -32,6 +32,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "lodash": "^4.16.4",
     "node-uuid": "^1.4.7",
     "react": "^15.3.2",
